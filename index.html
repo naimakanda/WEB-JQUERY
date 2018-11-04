@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NEW</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/edslider.css">
+    <link rel="stylesheet" href="css/style01.css">
+    <link rel="stylesheet" href="./css/style02.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style03.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="mySlideshow">
+            <li class="first">
+                <div class="animated fadeInRight">It's time to ride!</div>
+            </li>
+            <li class="second">
+                <img src="images/second-title.png" class="animated fadeInRight">
+            </li>
+            <li class="third">
+                <img src="images/third-title.png" class="animated fadeInLeft">
+            </li>
+            <li class="fourth">
+                <img src="images/fourth-title.png" class="animated fadeInRight">
+            </li>
+            <li class="fifth">
+                <img src="images/fifth-title.png" class="animated fadeInLeft">
+            </li>
+        </ul>
+    </div>
+    <!--1st part ends-->
+    
+       
+       
+       <div class="slider-container">
+        <div class="slider">
+            <div class="slider__item">
+                <img src="images/1.jpg" alt="">
+                <span class="slider__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <a href="">Далее >></a>
+                   </span>
+            </div>
+
+            <div class="slider__item">
+                <img src="images/2.jpg" alt="">
+                <span class="slider__caption">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <a href="">Далее >></a>
+                  </span>
+            </div>
+
+            <div class="slider__item">
+                <img src="images/3.jpg" alt="">
+                <span class="slider__caption">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <a href="">Далее >></a>
+                  </span>
+            </div>
+        </div>
+        <!--  arrow start  -->
+        <div class="slider__switch slider__switch--prev" data-ikslider-dir="prev">
+            <span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path d="M13.89 17.418c.27.272.27.71 0 .98s-.7.27-.968 0l-7.83-7.91c-.268-.27-.268-.706 0-.978l7.83-7.908c.268-.27.7-.27.97 0s.267.71 0 .98L6.75 10l7.14 7.418z"/></svg></span>
+        </div>
+
+        <div class="slider__switch slider__switch--next" data-ikslider-dir="next">
+            <span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path d="M13.25 10L6.11 2.58c-.27-.27-.27-.707 0-.98.267-.27.7-.27.968 0l7.83 7.91c.268.27.268.708 0 .978l-7.83 7.908c-.268.27-.7.27-.97 0s-.267-.707 0-.98L13.25 10z"/></svg></span>
+        </div>
+    </div>
+    <!--2nd part ends-->
+
+    
+       <div class="full_wrapper">
+       <div class="slide_box">
+        <ul class="slide_img">
+            <li>
+                <img src="https://unsplash.it/600/450/?random" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/610/500/?random" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/700/450/?random" alt="" />
+            </li>
+        </ul>
+        <a href="javascript:;" class="btn_l">&lt;</a>
+        <a href="javascript:;" class="btn_r">&gt;</a>
+
+    </div>
+</div>
+    <!--3rd part ends-->
+
+    <!-- JS links  -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.edslider.js"></script>
+    <script src="js/slider1.js"></script>
+    <script src="js/slideZ.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function() {
+            //Call plugin
+            $('.mySlideshow').edslider({
+                width: '100%',
+                height: 500
+            });
+
+
+            $(".slider-container").ikSlider({
+                speed: 500
+            });
+            $(".slider-container").on('changeSlide.ikSlider', function(evt) {
+                console.log(evt.currentSlide);
+            });
+
+
+            $(function() {
+                $(".slide_box").slideZ({
+                    speed: 900,
+                    autoPlay: true,
+                    haveCircle: true
+                });
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0px;
+}
+
+.clr {
+    clear: both;
+}
+
+/*
+@font-face{
+    font-family:agora_light;
+    src: url(../fonts/PFAgoraSansPro-Light_35306.ttf)
+}
+*/
+
+/*common css*/
+
+.full_wrapper {
+    width: 100%;
+}
+
+/*menubar part ends*/
